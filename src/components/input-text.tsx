@@ -36,6 +36,7 @@ export default function InputText({
         textVariants(),
         className
       )}
-    ></input>
+      {...props}
+    />
   );
 }
