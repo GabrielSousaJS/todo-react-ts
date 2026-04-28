@@ -1,5 +1,4 @@
 import { cva, cx, type VariantProps } from 'class-variance-authority';
-import { iconVariants } from './icon';
 import { textVariants } from './text';
 
 export const inputTextVariants = cva(

@@ -1,5 +1,5 @@
 import { cva, type VariantProps } from 'class-variance-authority';
-import Icon, { iconVariants } from './icon';
+import Icon from './icon';
 
 export const buttonIconVariants = cva(
   'inline-flex items-center justify-center cursor-pointer, transition group',
