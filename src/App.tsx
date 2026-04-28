@@ -1,7 +1,9 @@
 import Text from './components/text';
 import TrashIcon from './assets/icons/transh.svg?react';
 import SpinnerIcon from './assets/icons/spinner.svg?react';
-import Icon from './components/icons';
+import Icon from './components/icon';
+import Button from './components/button';
+import PlusIcon from './assets/icons/plus.svg?react';
 
 export default function App() {
   return (
@@ -14,6 +16,10 @@ export default function App() {
       <div>
         <TrashIcon className="fill-pink-base" />
         <Icon svg={SpinnerIcon} animate />
+      </div>
+
+      <div>
+        <Button icon={PlusIcon}>Nova Tarefa</Button>
       </div>
     </div>
   );
