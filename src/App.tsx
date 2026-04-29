@@ -9,10 +9,11 @@ import Badge from './components/badge';
 import InputText from './components/input-text';
 import InputCheckbox from './components/input-checkbox';
 import Card from './components/card';
+import Container from './components/container';
 
 export default function App() {
   return (
-    <div>
+    <Container>
       <div>
         <Badge variant="secondary">5</Badge>
         <Badge>2 de 5</Badge>
@@ -43,6 +44,6 @@ export default function App() {
       <div>
         <Card>Olá mundo</Card>
       </div>
-    </div>
+    </Container>
   );
 }
