@@ -27,7 +27,7 @@ export default function Container({
   return React.createElement(
     as,
     {
-      className: containerVariants({ size }),
+      className: containerVariants({ size, className }),
       ...props
     },
     children
