@@ -2,11 +2,10 @@ import Button from '../components/button';
 import PlusIcon from '../assets/icons/plus.svg?react';
 import TaskItem from './task-item';
 import useTask from '../hooks/use-task';
+import { TaskState } from '../models/task';
 
 export default function TasksList() {
   const { tasks, addPrepareTask } = useTask();
-
-  console.log(tasks);
 
   function handleNewTask() {
     addPrepareTask();
@@ -15,15 +14,19 @@ export default function TasksList() {
   return (
     <>
       <section>
-        <Button className="w-full" icon={PlusIcon} onClick={handleNewTask}>
+        <Button
+          className="w-full"
+          icon={PlusIcon}
+          onClick={handleNewTask}
+          disabled={tasks.some((task) => task.state === TaskState.Creating)}
+        >
           Nova Tarefa
         </Button>
       </section>
       <section className="space-y-2">
-        <TaskItem />
-        <TaskItem />
-        <TaskItem />
-        <TaskItem />
+        {tasks.map((task) => (
+          <TaskItem key={task.id} task={task} />
+        ))}
       </section>
     </>
   );
